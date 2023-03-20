@@ -25,7 +25,12 @@ export default function Hero() {
       </section>
       <section className="w-1/2 h-100 ">
         <figure className="w-full h-full relative">
-          <Image src={featureImage} fill style={{ objectFit: "contain" }} />
+          <Image
+            src={featureImage}
+            fill
+            style={{ objectFit: "contain" }}
+            alt="cryto token and NFTs"
+          />
         </figure>
       </section>
     </main>
