@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="w-screen min-h-screen  relative isolate">
+    <main className="w-screen min-h-screen relative isolate">
       <div className="absolute top-0 left-4">
         <Shadow w="400" h="400" />
       </div>

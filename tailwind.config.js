@@ -19,6 +19,9 @@ module.exports = {
       height: {
         100: "30rem",
       },
+      backgroundColor: {
+        "button-blue": "#BBFFFF",
+      },
     },
   },
   plugins: [],
