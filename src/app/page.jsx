@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Shadow from "./components/Shadow";
-import Hero from "./components/Hero";
+import Shadow from "@/components/Shadow";
+import Hero from "@/components/Hero";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });

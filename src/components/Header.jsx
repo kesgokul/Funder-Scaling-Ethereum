@@ -16,18 +16,20 @@ export default function Header() {
     const authState = await auth.signIn();
   }
 
-  //   useEffect(() => {
-  //     handleSignOut();
-  //     console.log(isLoggedIn);
-  //   }, [isLoggedIn]);
+  useEffect(() => {
+    handleSignOut();
+    console.log(isLoggedIn);
+  }, [isLoggedIn]);
 
   //   console.log(loading);
   return (
     <main className="px-2 py-4 lg:p-8 flex items-center gap-4 bg-transparent">
       <Logo />
-      <InfoButton styles="ml-auto" />
-      {!loading && !isLoggedIn && <SignInButton onClick={handleSignIn} />}
-      {state && <Profile state={state} />}
+      <div className="ml-auto flex gap-4">
+        <InfoButton styles="" />
+        {!loading && !isLoggedIn && <SignInButton onClick={handleSignIn} />}
+        {state && <Profile state={state} onSignOut={handleSignOut} />}
+      </div>
     </main>
   );
 }

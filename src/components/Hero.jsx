@@ -1,5 +1,6 @@
 import Image from "next/image";
-import featureImage from "../../../public/images/hero-feature.png";
+import featureImage from "../../public/images/hero-feature.png";
+import { motion } from "framer-motion";
 import { Righteous, Montserrat } from "next/font/google";
 const righteous = Righteous({ subsets: ["latin"], weight: ["400"] });
 const mont = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
@@ -9,6 +10,11 @@ export default function Hero() {
     <main className="bg-transparent  w-11/12 max-w-6xl mt-30 mx-auto flex justify-between items-center z-10">
       <section className="flex flex-col w-2/5 gap-4">
         <h1
+          initial={{ opacity: 0 }}
+          animate={{
+            y: [-10, 0],
+            opacity: 1,
+          }}
           className={`${righteous.className} text-6xl font-bold text-white uppercase`}
         >
           Lorem ipsum dolor sit amet.
