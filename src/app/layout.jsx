@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <div className="absolute top-0 left-4 z-0">
           <Shadow w="400" h="400" />
         </div>
-        <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-48">
+        <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-48 z-0">
           <Shadow w="400" h="400" />
         </div>
         <Providers>
