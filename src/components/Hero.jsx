@@ -7,7 +7,7 @@ const mont = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function Hero() {
   return (
-    <main className="bg-transparent  w-11/12 max-w-6xl mt-30 mx-auto flex justify-between items-center z-10">
+    <main className=" bg-transparent  w-11/12 max-w-6xl mx-auto flex justify-between items-center z-10">
       <section className="flex flex-col w-2/5 gap-4">
         <h1
           initial={{ opacity: 0 }}

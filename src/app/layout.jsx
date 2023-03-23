@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Providers from "./Providers";
+import Shadow from "@/components/Shadow";
 import "./globals.css";
 
 export const metadata = {
@@ -10,11 +11,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-waves bg-cover bg-opacity-30 bg-green-900 bg-blend-darken relative isolate">
+      <body className=" relative isolate">
+        <div className="absolute top-0 left-4 z-0">
+          <Shadow w="400" h="400" />
+        </div>
+        <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-48">
+          <Shadow w="400" h="400" />
+        </div>
         <Providers>
           <>
             <Header />
-
             {children}
           </>
         </Providers>

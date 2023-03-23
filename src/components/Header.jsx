@@ -23,7 +23,7 @@ export default function Header() {
 
   //   console.log(loading);
   return (
-    <main className="px-2 py-4 lg:p-8 flex items-center gap-4 bg-transparent">
+    <main className="px-2 py-4 lg:p-8 flex items-center gap-4 bg-transparent absolute top-0 left-0 right-0">
       <Logo />
       <div className="ml-auto flex gap-4">
         <InfoButton styles="" />

@@ -7,13 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="w-screen min-h-screen ">
-      <div className="absolute top-0 left-4 z-0">
-        <Shadow w="400" h="400" />
-      </div>
-      <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-48">
-        <Shadow w="400" h="400" />
-      </div>
+    <main className="min-h-screen pt-40 bg-waves bg-cover bg-opacity-30 bg-green-900 bg-blend-darken">
       <Hero />
     </main>
   );
