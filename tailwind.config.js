@@ -22,6 +22,9 @@ module.exports = {
       backgroundColor: {
         "button-blue": "#BBFFFF",
       },
+      textColor: {
+        "orange-desc": "#FF9950",
+      },
     },
   },
   plugins: [],
