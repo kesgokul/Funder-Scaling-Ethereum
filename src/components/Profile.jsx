@@ -12,8 +12,7 @@ export default function Profile({ state, onSignOut }) {
 
   async function handleSignOut() {
     console.log("singout");
-    // await auth.signOut();
-    // setDropDown(false);
+    await onSignOut();
   }
   return (
     <motion.main
@@ -25,7 +24,7 @@ export default function Profile({ state, onSignOut }) {
           type: "spring",
         },
       }}
-      className=" px-6 py-2 flex flex-col  bg-white border-2 border-orange-600 rounded-md absolute right-6"
+      className=" px-6 py-2 flex flex-col  bg-white border-2 border-orange-600 rounded-md absolute right-20 z-20"
     >
       <button
         onClick={() => setDropDown((s) => !s)}
@@ -46,7 +45,7 @@ export default function Profile({ state, onSignOut }) {
         </p>
       </button>
       {dropDown && (
-        <section className="mt-2  bg-white w-full rounded-md">
+        <div className="mt-2  bg-white w-full rounded-md">
           <ul className="w-full flex flex-col gap-2">
             <li className="border-t pt-2 border-gray-300">
               <Link className="text-gray-900" href="/my-profile">
@@ -58,17 +57,17 @@ export default function Profile({ state, onSignOut }) {
                 My Contributions
               </Link>
             </li>
-            <li className="border-t pt-2 border-gray-300">
-              <div
-                onClick={() => console.log("sing")}
-                onMouseEnter={() => console.log("mouseenter")}
-                className="uppercase text-orange-500 bg-black"
+            <li>
+              <button
+                type="button"
+                onClick={handleSignOut}
+                className="mt-4 py-2 w-full bg-black uppercase text-orange-500 cursor-pointer"
               >
                 Sign out
-              </div>
+              </button>
             </li>
           </ul>
-        </section>
+        </div>
       )}
     </motion.main>
   );

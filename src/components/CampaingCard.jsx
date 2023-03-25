@@ -38,14 +38,14 @@ const TargetStaus = ({ completed }) => {
         <span className="text-md text-white">{`${completed.toFixed(1)}%`}</span>{" "}
         towards the target has been acheived
       </p>
-      <ProgressBar
+      {/* <ProgressBar
         completed={completed}
         bgColor="#EC6CB9"
         height="10px"
         baseBgColor="#313439"
         labelSize="8px"
         isLabelVisible={false}
-      />
+      /> */}
     </article>
   );
 };

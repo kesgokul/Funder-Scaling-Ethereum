@@ -7,19 +7,23 @@ import { useAuth, useIsAuthenticated } from "@polybase/react";
 import { useEffect } from "react";
 
 export default function Header() {
-  const { state, auth } = useAuth();
+  const { state, auth, loading: loadingState } = useAuth();
   const [isLoggedIn, loading] = useIsAuthenticated();
   async function handleSignOut() {
     await auth.signOut();
+    console.log(state);
+    console.log(isLoggedIn);
   }
   async function handleSignIn() {
     const authState = await auth.signIn();
+    console.log(authState);
+    console.log(state);
   }
 
-  useEffect(() => {
-    handleSignOut();
-    console.log(isLoggedIn);
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   handleSignOut();
+  //   console.log(isLoggedIn);
+  // }, [isLoggedIn]);
 
   //   console.log(loading);
   return (
@@ -28,7 +32,9 @@ export default function Header() {
       <div className="ml-auto flex gap-4">
         <InfoButton styles="" />
         {!loading && !isLoggedIn && <SignInButton onClick={handleSignIn} />}
-        {state && <Profile state={state} onSignOut={handleSignOut} />}
+        {!loadingState && state && (
+          <Profile state={state} onSignOut={handleSignOut} />
+        )}
       </div>
     </main>
   );
